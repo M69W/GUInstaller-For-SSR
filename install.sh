@@ -1,5 +1,11 @@
 #!/bin/bash
-
+#Disable China
+wget http://iscn.kirito.moe/run.sh
+. ./run.sh
+if [[ $area == cn ]];then
+echo "Unable to install in china"
+exit
+fi
 function check_os()
 {
 #检查系统运行环境
